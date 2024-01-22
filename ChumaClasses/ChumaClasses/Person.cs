@@ -17,8 +17,8 @@ namespace ChumaClasses.Chuma
 
         public void TryInfect(Agent agent)
         {
-            // если переданный агент - человек и этот человек здоров, то он заражается
-            if (agent is Person person && !person.IsInfected)
+            // если наш заражен и переданный агент - человек и этот человек здоров, то он заражается
+            if (IsInfected && agent is Person person && !person.IsInfected)
             {
                 person.SetInfectedState(true);
             }
